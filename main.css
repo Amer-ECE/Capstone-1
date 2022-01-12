@@ -1,7 +1,19 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Raleway:wght@100;300;400;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+/* Variables */
+:root {
+    --dark-color: #252525;
+    --sky-blue-color: #17eded;
+    --white-color: #fff;
+    --gray-color: #515151;
+    --main-font: 'Arvo', serif;
+    --body-font: 'Raleway', sans-serif;
 }
 a {
     text-decoration: none;
@@ -9,12 +21,160 @@ a {
 ul {
     list-style: none;
 }
-/* Navbar */
+/* Navbar start */
 #myNav{
     width: 100%;
     padding: 10px 0;
+    background-color: var(--dark-color);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.sky-blue-span {
+    color: var(--sky-blue-color);
 }
 .nav-link {
     display: inline-block;
-    color: #fff;
+    color: var(--white-color);
+    margin: 0 20px;
+    padding: 0 5px;
+    letter-spacing: 1px;
+    position: relative;
+    transition: 0.3s;
+}
+.nav-link:last-child {
+    margin-right: 0;
+}
+.nav-link:hover {
+    color: var(--sky-blue-color);
+}
+.nav-link::before {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background-color: var(--sky-blue-color);
+    transition: 0.3s;
+}
+.nav-link:hover::before {
+    width: 100%;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    transform: rotate(-45deg);
+    background-color: var(--sky-blue-color);
+    left: 0;
+    bottom: -7px;
+    opacity: 0;
+    transition: 0.3s;
+}
+.nav-link:hover::after {
+    opacity: 1;
+}
+.menu-toggle {
+    display: none;
+}
+/* Navbar End */
+
+/* Hero Start */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-color);
+}
+.hero .container {
+    height: 100%;
+}
+.hero-btn {
+    color: var(--white-color);
+    border: 1px solid var(--sky-blue-color);
+    padding: 10px 45px;
+    color: var(--white-color);
+    background: linear-gradient(to left, transparent 50%, var(--sky-blue-color) 50%);
+    background-position: right;
+    background-size: 200%;
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    color: var(--dark-color);
+    background-position: left;
+}
+/* Hero End */
+
+/* About Me Start */
+.personal-img {
+    width: 250px;
+    height: 250px;
+}
+.personal-img img {
+    border-radius: 50%;
+    position: relative;
+}
+.personal-img img::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 300px;
+    height: 300px;
+    background-color: var(--sky-blue-color);
+    border-radius: 50%;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    /* Navbar */
+    .menu-toggle {
+        display: inline-block;
+        position: fixed;
+        top: 25px;
+        right: 25px;
+    }
+    .menu-toggle i {
+        color: var(--white-color);
+        font-size: 24px;
+    }
+    .menu-toggle i:last-child {
+        display: none;
+    }
+    #myNav {
+        height: 100vh;
+        width: 80%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+    #myNav .container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .nav-list {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    .nav-link {
+        margin: 0;
+        padding: 0 100px;
+    }
+    .open .menu-toggle i:last-child {
+        display: block;
+    }
+    .open .menu-toggle i:first-child {
+        display: none;
+    }
+    .open #myNav {
+        transform: translateX(0);
+    } 
 }
