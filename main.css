@@ -6,19 +6,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: var(--body-font);
 }
-/* Variables */
+/* ------------ Variables ------------ */
 :root {
     --dark-color: #252525;
-    --sky-blue-color: #17eded;
-    --dark-sky-blue: #20cccc;
+    --sky-blue-color: #20cccc;
     --white-color: #fff;
     --gray-color: #515151;
     --main-font: 'Arvo', serif;
     --body-font: 'Raleway', sans-serif;
 }
+/* ------------ Common Styles ------------ */
 h1,
 h2,
 h3,
@@ -29,7 +32,7 @@ h6 {
 
 }
 .title {
-    color: var(--dark-sky-blue);
+    color: var(--sky-blue-color);
     position: relative;
     font-weight: 600;
     letter-spacing: 1px;
@@ -42,7 +45,7 @@ h6 {
     bottom: -10px;
     width: 15%;
     height: 3px;
-    background-color: var(--dark-sky-blue);
+    background-color: var(--sky-blue-color);
 }
 a {
     text-decoration: none;
@@ -50,15 +53,16 @@ a {
 ul {
     list-style: none;
 }
-/* Navbar start */
+
+/* ------------ Navbar start ------------ */
 #myNav{
     width: 100%;
     padding: 10px 0;
-    background-color: var(--dark-color);
     position: fixed;
     left: 0;
     top: 0;
     z-index: 50;
+    transition: 0.5s;
 }
 .sky-blue-span {
     color: var(--sky-blue-color);
@@ -109,9 +113,9 @@ ul {
 .menu-toggle {
     display: none;
 }
-/* Navbar End */
+/* ------------ Navbar End ------------ */
 
-/* Hero Start */
+/* ------------ Hero Start ------------ */
 .hero {
     width: 100%;
     height: 100vh;
@@ -119,6 +123,16 @@ ul {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+.hero h1 {
+    opacity: 0;
+    animation: showUp 1s forwards;
+    animation-delay: 1s;
+}
+.hero h2 {
+    opacity: 0;
+    animation: showUp 1s forwards;
+    animation-delay: 1s;
 }
 .hero .container {
     height: 100%;
@@ -132,14 +146,20 @@ ul {
     background-position: right;
     background-size: 200%;
     transition: 0.3s;
+    opacity: 0;
+    animation: showDown 1s forwards;
+    animation-delay: 2s;
 }
 .hero-btn:hover {
     color: var(--dark-color);
     background-position: left;
 }
-/* Hero End */
+/* ------------ Hero End ------------ */
 
-/* About Me Start */
+/* ------------ About Me Start ------------ */
+.about {
+    overflow: hidden;
+}
 .personal-img {
     width: 250px;
     height: 250px;
@@ -147,9 +167,16 @@ ul {
 }
 .personal-img img {
     border-radius: 50%;
-    position: relative;  
+    position: relative;
+    filter: grayscale(1);
+    transition: 0.3s;
 }
-.me {
+.personal-img img:hover,
+.personal-img img:focus {
+    filter: grayscale(0);
+    transform: rotate(-5deg);
+}
+.introduction {
     flex-basis: 50%;
 }
 .skills {
@@ -164,15 +191,17 @@ ul {
     border-radius: 10px;
 }
 .progress-fill {
-    width: 70%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-color: var(--sky-blue-color);
+    animation: fill70 2s forwards;
+    animation-delay: 1.6s;
 }
 .js {
-    width: 25%;
+    animation: fill25 2s forwards;
+    animation-delay: 1.6s;
 }
 .progress-text {
     z-index: 50;
@@ -189,11 +218,15 @@ ul {
     transform: translateY(-50%);
     color: var(--white-color);
 }
-/* About Me End */
+/* ------------ About Me End ------------ */
 
-/* Project Start */
+/* ------------ Project Start ------------ */
 .projects {
     background-color: var(--dark-color);
+    overflow: hidden;
+    padding: 60px 0;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
 }
 .projects .card, .projects .list-group-item {
     background-color: #27292b;
@@ -241,22 +274,25 @@ ul {
     transform: scale(1.5);
     color: #ff5733;
 }
-/* Projects End */
+/* ------------ Projects End ------------ */
 
-/* Contact Start */
+/* ------------ Contact Start ------------ */
+.contact {
+    overflow: hidden;
+}
 .contact input {
     border: none;
     border-bottom: 2px solid var(--dark-color);
 }
 .contact input:focus {
     box-shadow: none;
-    border-color: var(--dark-sky-blue);
+    border-color: var(--sky-blue-color);
 }
 .contact textarea {
     border: 2px solid var(--dark-color);
 }
 .contact textarea:focus {
-    border-color: var(--dark-sky-blue);
+    border-color: var(--sky-blue-color);
     box-shadow: none;
 }
 .google-map {
@@ -264,9 +300,24 @@ ul {
     width: 100%;
     border-radius: 20px;
 }
-/* Contact End */
+.contact button {
+    width: 100%;
+    background-color: var(--sky-blue-color);
+    font-weight: 600;
+    transition: 0.3s;
+}
+.contact button:hover,
+.contact button:focus {
+    background-color: var(--dark-color);
+    color: var(--sky-blue-color);
+    box-shadow: none;
+}
+.fa-heart {
+    color: rgb(231, 91, 91);
+}
+/* ------------ Contact End ------------ */
 
-/* Footer Start */
+/* ------------ Footer Start ------------ */
 footer {
     background-color: var(--dark-color);
     position: relative;
@@ -276,6 +327,9 @@ footer i {
 }
 footer p {
     color: var(--white-color);
+}
+.footer-content {
+    overflow: hidden;
 }
 .back-to-top {
     position: absolute;
@@ -291,6 +345,10 @@ footer p {
     display: block;
     text-align: center;
     padding: 10px;
+    animation: up 1.2s infinite;
+}
+footer .title::after {
+    width: 40%;
 }
 .social-media i {
     font-size: 26px;
@@ -301,7 +359,9 @@ footer p {
     transform: rotate(-45deg);
     color: var(--sky-blue-color);
 }
-/* Media Query */
+/* ------------ Footer End ------------ */
+
+/* ------------ Media Query Start ------------ */
 @media (max-width: 768px) {
     /* Navbar */
     .menu-toggle {
@@ -309,13 +369,16 @@ footer p {
         position: fixed;
         top: 25px;
         right: 25px;
+        z-index: 50;
+        cursor: pointer;
     }
     .menu-toggle i {
-        color: var(--white-color);
+        color: var(--sky-blue-color);
         font-size: 24px;
     }
     .menu-toggle i:last-child {
         display: none;
+        color: rgb(231, 91, 91);
     }
     #myNav {
         height: 100vh;
@@ -325,6 +388,7 @@ footer p {
         left: 0;
         transform: translateX(-100%);
         transition: 0.5s;
+        background-color: var(--dark-color) !important;
     }
     #myNav .container {
         flex-direction: column;
@@ -351,4 +415,57 @@ footer p {
     .open #myNav {
         transform: translateX(0);
     } 
+}
+/* ------------ Media Query End ------------ */
+
+/* ------------ Animation Keyframes ------------ */
+@keyframes showUp {
+    0% {
+        transform: translateY(64px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes showDown {
+    0% {
+        transform: translateY(-16px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes up {
+    0% {
+        opacity: 0;
+    }   
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fill70 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes fill25 {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 25%;
+    }
 }
