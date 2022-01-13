@@ -22,21 +22,21 @@
         <div class="container d-flex align-items-center justify-content-between">
             <a href="./index.html" class="logo text-white fw-bold fs-4">&lt; Amer<span class="sky-blue-span">ECE</span> /&gt;</a>
             <div class="nav-list">
-                <a href="./index.html" class="nav-link">Home</a>
-                <a href="#" class="nav-link">About</a>
-                <a href="#" class="nav-link">Projects</a>
-                <a href="#" class="nav-link">Contact</a>
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
         </div>
     </nav>
     <!-- End of Navbar -->
 
     <!-- Start of Hero -->
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container d-flex align-items-center justify-content-center">
                 <div class="hero-content text-center text-white">
                         <h1>Hello, I'm <span class="sky-blue-span">Amer Moh'd</span>.</h1>
-                        <h2>I'm a Frontend Web Developer.</h2>
+                        <h2 class="text-white">I'm a Frontend Web Developer.</h2>
                         <div class="mt-5"><a href="#projects" class="hero-btn">View my works</a></div>
                 </div>
             </div>
@@ -44,26 +44,224 @@
     <!-- End of Hero -->
 
     <!-- Start of About Me -->
-    <section class="about p-5">
+    <section class="about p-5" id="about">
         <div class="container">
-            <h2 class="text-center mb-5">About Me</h2>
-            <div class="about-content d-flex flex-column flex-sm-row align-items-center justify-content-evenly">
-                <div class="about-img">
-                    <div class="personal-img animate-left"><img src="./images/personal-img-2.jpg" alt="personal img" class="img-fluid"></div>
+            <h2 class="text-center mb-5 title">About Me</h2>
+            <div class="about-content d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <div class="me">
+                    <div class="personal-img mb-4 animate-left"><img src="./images/personal-img-2.jpg" alt="personal img" class="img-fluid"></div>
+                    <div class="about-text-box text-center animate-right">
+                        <h3>&lt; Coder /&gt;</h3>
+                        <p>I'm a Frontend Developer <br>Learned at Zuitt Coding Bootcamp</p>
+                        <p>I love coding and its logic and structure, <br>
+                            writing a clean and efficient code. Love HTML, CSS, and Javascript</p>
+                    </div>
                 </div>
-                <div class="about-text-box animate-right">
-                    <h3>I'm Studying Electronics and Communication Engineering at <br>University of the Cordilleras</h3>
-                    <h3>&lt; Coder /&gt;</h3>
-                    <p>I'm a Frontend Developer <br>Learned at Zuitt Bootcamp</p>
-                    <p>I love coding and its logic and structure, <br>
-                        writing a clean and efficient code. Love HTML, CSS, and Javascript</p>
+                <div class="skills d-flex flex-column align-items-center justify-content-around">
+                        <div class="progress-bar mb-4">
+                            <div class="progress-fill"></div>
+                            <span class="progress-text">70%</span>
+                            <span class="progress-icon fw-bold">
+                                HTML <i class="fas fa-code"></i>
+                            </span>
+                        </div>
+                        <div class="progress-bar mb-4">
+                            <div class="progress-fill"></div>
+                            <span class="progress-text">70%</span>
+                            <span class="progress-icon fw-bold">
+                                CSS <i class="fab fa-css3"></i>
+                            </span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill js"></div>
+                            <span class="progress-text">25%</span>
+                            <span class="progress-icon fw-bold">
+                                JavaScript <i class="fab fa-js-square"></i>
+                            </span>
+                        </div>
                 </div>
+                
             </div>
         </div>
     </section>
     <!-- End of About Me -->
 
-    <!-- Start of  -->
+    <!-- Start of Projects -->
+    <section class="projects p-5" id="projects">
+        <div class="container">
+            <h2 class="text-center mb-5 title">Projects</h2>
+            <div class="row g-3 align-items-center justify-content-around">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./images/Portfolio.png" class="card-img-top img-fluid" alt="Portfolio image">
+                        <div class="card-body">
+                            <h5 class="card-title">Capstone 1</h5>
+                            <p class="card-text">Capstone project given by Zuitt Bootcamp</p>
+                          </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-bootstrap"></i>
+                            <i class="fab fa-js-square"></i>
+                          </li>
+                          <li class="list-group-item">Source Code 
+                              <a href="https://gitlab.com/AmerECE-zuitt-projects/b153/csp1" target="_blank"><i class="fab fa-gitlab"></i></a>
+                          </li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./images/Testimonials.png" class="card-img-top img-fluid" alt="Project 2">
+                        <div class="card-body">
+                          <h5 class="card-title">Testimonials Grid</h5>
+                          <p class="card-text">A challenge from Frontend Mentor Website</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                          </li>
+                          <li class="list-group-item">Source Code 
+                            <a href="https://github.com/Amer-ECE/Testimonials-grid-" target="_blank"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="./images/Order summary.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                          <h5 class="card-title">Order Summary</h5>
+                          <p class="card-text">A challenge from Frontend Mentor Website</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                          </li>
+                          <li class="list-group-item">Source Code 
+                            <a href="https://github.com/Amer-ECE/Order-summary-component" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        </ul>
+                      </div>
+                </div>
+                <!-- <div class="col-md-3">
+                    <div class="card">
+                        <img src="./images/Rotated-features.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                          <h5 class="card-title">Rotate Features</h5>
+                          <p class="card-text">Design and layout inspired from a learning channel in youtube</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">
+                            <i class="fab fa-html5"></i>
+                            <i class="fab fa-css3-alt"></i>
+                            <i class="fab fa-js-square"></i>
+                          </li>
+                          <li class="list-group-item">Source Code 
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        </ul>
+                      </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- End of Projects -->
+
+    <!-- Start of Contact -->
+    <section class="contact p-5" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5 title">Contact Me</h2>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name :</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                          </div>
+
+                        <div class="mb-4">
+                          <label for="email" class="form-label">Email address :</label>
+                          <input type="email" class="form-control" id="email" placeholder="Your-email" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="phoneNumber" class="form-label">Phone Number :</label>
+                            <input type="email" class="form-control" id="phoneNumber" placeholder="+63 *********">
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message :</label>
+                            <textarea id="message" class="form-control" cols="30" rows="5" placeholder="Write Your Message" required></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#submit">
+                            Submit
+                        </button>
+                      </form>
+                </div>
+
+                <div class="col-md-6">
+                    <iframe class="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3827.779931642006!2d120.59065909694503!3d16.38516913684934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3391a11e31ef789f%3A0xc9c8abef65966258!2sBakakeng%20Rd%2C%20Baguio%2C%20Benguet!5e0!3m2!1sen!2sph!4v1642066494244!5m2!1sen!2sph" allowfullscreen="" loading="lazy" scrolling="no" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal fade" id="submit" tabindex="-1" aria-labelledby="submitLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="submitLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    ...
+                </div>
+
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Contact -->
+    
+    <!-- Start of Footer -->
+    <footer class="p-5">
+        <div class="container">
+            <div class="back-to-top">
+                <a href="#hero"><i class="fas fa-chevron-up"></i></a>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row align-items-center justify-content-around">
+                <div class="find-me">
+                    <h3 class="text-white text-center mb-4">Find Me</h3>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-gitlab"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-info text-center">
+                    <h3 class="text-white my-4">Contact Info</h3>
+                    <p>philippine, Baguio City</p>
+                    <p>amerm4011@gmail.com</p>
+                    <p>+639566841105</p>
+                </div>
+            </div>
+            <small class="text-white d-flex align-items-center justify-content-center">AmerECE &copy; 2022</small>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+
+    
     
     <!-- Bootstrap5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
