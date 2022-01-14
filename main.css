@@ -196,11 +196,11 @@ ul {
     top: 0;
     left: 0;
     background-color: var(--sky-blue-color);
-    animation: fill70 2s forwards;
+    animation: fill70 3s forwards;
     animation-delay: 2.5s;
 }
 .js {
-    animation: fill25 2s forwards;
+    animation: fill25 3s forwards;
     animation-delay: 2.5s;
 }
 .progress-text {
