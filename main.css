@@ -200,7 +200,7 @@ ul {
     animation-delay: 2.5s;
 }
 .js {
-    animation: fill25 3s forwards;
+    animation: fill45 3s forwards;
     animation-delay: 2.5s;
 }
 .progress-text {
@@ -240,6 +240,10 @@ ul {
     transform: translateY(-10px);
     box-shadow: 0 0 10px var(--white-color);
 }
+.projects .list-group-item .iconify {
+    margin-left: 5px;
+    transition: 0.3s;
+}
 .projects .fab {
     margin-left: 10px;
     font-size: 18px;
@@ -257,13 +261,13 @@ ul {
 .projects .fa-html5:hover {
     color: #ff5733;
 }
-.projects .fa-css3-alt:hover {
+.projects .fa-css3-alt:hover, .react:hover {
     color: #379ad6;
 }
 .projects .fa-bootstrap:hover {
     color: #8c12fd;
 }
-.projects .fa-js-square:hover {
+.projects .fa-js-square:hover, .node:hover, .express:hover {
     color: #f0db4f;
 }
 .projects .fa-github:hover {
@@ -273,6 +277,17 @@ ul {
 .projects .fa-gitlab:hover {
     transform: scale(1.5);
     color: #ff5733;
+}
+.projects .mongodb:hover {
+    color: 	#AFE1AF;
+}
+.projects .visit-link {
+    color: var(--white-color);
+    padding-right: 10px;
+    transition: 0.3s;
+}
+.projects .visit-link:hover {
+    color: var(--sky-blue-color);
 }
 /* ------------ Projects End ------------ */
 
@@ -461,11 +476,11 @@ footer .title::after {
     }
 }
 
-@keyframes fill25 {
+@keyframes fill45 {
     0% {
         width: 0;
     }
     100% {
-        width: 25%;
+        width: 45%;
     }
 }
